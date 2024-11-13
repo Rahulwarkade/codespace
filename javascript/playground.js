@@ -1,12 +1,12 @@
 "use strict";
+// Data types
+//number => 2 to power 53
+// bigint
+// string =>""
+// null 
+// undefined
+// symbol => unique
 
+// object
 
-function fun(){
-    var a = 24;
-
-    for(let i=2; i<3; i++) console.log(i);
-
-    console.log(i);
-}
-
-fun();
+console.log( typeof (typeof null))
