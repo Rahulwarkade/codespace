@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 *{
   margin : 0;
   padding : 0;
@@ -12,3 +13,28 @@ html,body{
 }
 
 
+.carousel{
+  animation-name: carouselImages;
+  animation-duration: 4s;  
+  animation-fill-mode: forwards;
+}
+.carouselTwo{
+  animation-name: carouselImages;
+  animation-duration: 4s;  
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.carouselThree{
+  animation-name: carouselImages;
+  animation-duration: 4s;  
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+@keyframes carouselImages{
+  from{
+      width : 0%
+  }
+  to{
+      width : 100%;
+  }
+}

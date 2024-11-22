@@ -1,14 +1,14 @@
+"use client"
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import EatsVertical from '../../public/eatsVertical.png';
 import CareVartical from '../../public/CareVartical.png';
 import FitVertical from '../../public/FitVertical.png';
-import svgVerticals from '../../public/svgVerticals.png';
+import {isMobile} from 'react-device-detect';
 
 
 const VarticalCards = () => {
-
     const verticals = [{ url: EatsVertical, title: "ToneOp Eats", borderColor: "#80B53B" }, { url: CareVartical, title: "ToneOp Care", borderColor: "#33C3F2", fromColor: "#33C3F2", viaColor: "#11A0DB", toColor: "#118DCD" }, { url: FitVertical, title: "ToneOp Fit", borderColor: "#59DF74", fromColor: "#59DF74", viaColor: "#15C0B6", toColor: "#15C0B6" }];
     return (
         <>
@@ -30,7 +30,8 @@ const VarticalCards = () => {
                         </span>
                         <span className='w-full h-auto text-center relative'>
                             <h1 className='text-[28px] font-normal leading-[46px] text-[#222222]'>{product.title}</h1>
-                            <p className='text-[20px] font-light leading-[30px] text-[#666666]'>Since 2020, ToneOp has been coming up with new initiatives to provide you with all possible health and fitness services and products. ToneOp Fit is one such platform under its umbrella which equips you with expert-created health & fitness plans through a mobile application.</p>
+                            <p className='text-[20px] font-light leading-[30px] text-[#666666]'>{isMobile? 
+                            "Since 2020, ToneOp has been coming up with new initiatives to provide you with all possible health and fitness services and products.":"Since 2020, ToneOp has been coming up with new initiatives to provide you with all possible health and fitness services and products. ToneOp Fit is one such platform under its umbrella which equips you with expert-created health & fitness plans through a mobile application."}</p>
                         </span>
 
                         <span className='w-full h-[70px] rounded-[90px] overflow-hidden bg-slate-600'>
